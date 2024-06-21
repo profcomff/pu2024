@@ -1,0 +1,17 @@
+version: '3.8'
+
+services:
+  chat:
+    build: .
+    environment:
+      - MAX_WORKERS=1
+    networks:
+      web:
+        aliases:
+          - com_profcomff_students_chat
+
+networks:
+  web:
+    external: true
+    name: web
+  default:

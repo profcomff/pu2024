@@ -1,0 +1,16 @@
+version: '3.8'
+
+services:
+  students-api:
+    image: students-api
+    container_name: com_profcomff_students_api
+    networks:
+      web:
+        aliases:
+          - com_profcomff_students_api
+
+networks:
+  web:
+    external: true
+    name: web
+  default:
